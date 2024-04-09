@@ -2345,7 +2345,7 @@ class CanMatrix(object):
             if self.frame_defines[define].type == "ENUM":
                 for frame in self.frames:
                     if define in frame.attributes:
-                        frame.attributes[define] = self.frame_defines[define].values[int(frame.attributes[define])]
+                        frame.attributes[define] = self.frame_defines[define].values[int(float(frame.attributes[define]))]
 
         for define in self.signal_defines:
             if self.signal_defines[define].type == "ENUM":
